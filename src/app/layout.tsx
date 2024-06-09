@@ -24,7 +24,9 @@ export default function RootLayout({
         </div>
         <nav>
           <a href="/learn-more" className="mx-3 hover:text-blue-500">Learn More</a>
-          <a href="/measurements" className="mx-3 hover:text-blue-500">Measurements</a>
+          <a
+            href={`/measurements/${new Date().getFullYear()}-${(new Date().getMonth() + 1).toString().padStart(2, '0')}-${new Date().getDate().toString().padStart(2, '0')}`}
+            className="mx-3 hover:text-blue-500">Measurements</a>
           <div className="inline-block relative">
             <a href="/register" className="mx-3 hover:bg-gray-200 border-2 px-4 py-2 rounded">Sign Up</a>
             <a href="/login" className="mx-3 hover:bg-gray-200 border-2 px-4 py-2 rounded">Sign In</a>
